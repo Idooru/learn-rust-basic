@@ -1,9 +1,10 @@
-fn main() {
-   let my_number = 9_u8;
-   let other_number = 1_000_000_000u64;
+// macro = function that writes code
+fn give_age() -> i32 {
+    42
+}
 
-   let my_number = 9.6;
-   let other_number = 9;
-   println!("{}", my_number as i32 + other_number);
-   println!("{}", my_number + other_number as f64);
+fn main() {
+    let my_name = "David";
+    let my_age=  give_age();
+    println!("My name is {my_name} and my age is {my_age}");
 }
