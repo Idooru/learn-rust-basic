@@ -1,10 +1,18 @@
-// macro = function that writes code
-fn give_age() -> i32 {
-    42
-}
-
 fn main() {
-    let my_name = "David";
-    let my_age=  give_age();
-    println!("My name is {my_name} and my age is {my_age}");
+    let my_city= "Seoul";
+    let year = 2002;
+    let population = 9_987_987;
+    println!(
+        "The city of {city} in {year} had a population of {population}.",
+        city = my_city,
+        year = year,
+        population = population
+    );
+
+    println!(
+        "The city of {0} in {1} had a population of {2}. I love {0}!",
+        my_city,
+        year,
+        population
+    );
 }
