@@ -1,15 +1,15 @@
+use std::mem::size_of;
+
 fn main() {
-   println!("Hello, World!");
-   let first_letter = 'A';
-   let space = ' ';
-   let broken_heart = '💔';
+    // char 4 bytes
+    println!("Size of a char: {} bytes", std::mem::size_of::<char>());
 
-    // casting = simple type change using 'as'
+    println!("Size of string containing 'a': {}", "a".len());  // ascii code
+    println!("Size of string containing 'ㄱ': {}", "ㄱ".len());   // uni code
+    println!("Size of string containing 'ㄱㄱㄱ': {}", "ㄱㄱㄱ".len());   // uni code
 
-    let my_number: u16 = 8;
-    let second_number: u8 = 10;
-    let third_number = my_number + second_number as u16;
-    
-    let my_number2 = 'a' as u8;
-    println!("Hello, World! My number is {}", my_number2);
+    let slice = "Hello!";
+    println!("Slice is {} bytes and also {} characters", slice.len(), slice.chars().count());
+    let slice2= "안녕!";
+    println!("Slice is {} bytes and also {} characters", slice2.len(), slice2.chars().count());
 }
