@@ -1,7 +1,15 @@
 fn main() {
-    let my_number:u8 = 100; // 255
-    let my_other_number = 50; // i32
-    let third_number = my_number + my_other_number;
+   println!("Hello, World!");
+   let first_letter = 'A';
+   let space = ' ';
+   let broken_heart = '💔';
 
-    println!("{}", third_number)
+    // casting = simple type change using 'as'
+
+    let my_number: u16 = 8;
+    let second_number: u8 = 10;
+    let third_number = my_number + second_number as u16;
+    
+    let my_number2 = 'a' as u8;
+    println!("Hello, World! My number is {}", my_number2);
 }
